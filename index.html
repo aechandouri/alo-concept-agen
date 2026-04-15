@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>A.L.O Concept — Charpentier Agen (47) | Kévin Alonso</title>
+<meta name="description" content="A.L.O Concept — Kévin Alonso, artisan charpentier à Agen. Charpente traditionnelle, véranda, ossature bois, entretien toiture. Devis gratuit. 9 avis 5★. Lot-et-Garonne (47).">
+<meta property="og:title" content="A.L.O Concept — Charpentier Agen (47)">
+<meta property="og:description" content="Charpente traditionnelle, véranda sur mesure, ossature bois, toiture. Artisan sérieux, délais respectés. 9 avis 5★.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://alo-concept-agen.vercel.app/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Epilogue:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"A.L.O Concept",
+  "description":"Artisan charpentier à Agen — charpente traditionnelle, véranda, ossature bois, entretien et réfection toiture.",
+  "telephone":"+33643720002",
+  "address":{"@type":"PostalAddress","addressLocality":"Agen","postalCode":"47000","addressCountry":"FR"},
+  "geo":{"@type":"GeoCoordinates","latitude":43.9141933,"longitude":0.8658096},
+  "url":"https://alo-concept-agen.vercel.app/",
+  "areaServed":{"@type":"AdministrativeArea","name":"Lot-et-Garonne"},
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"9"},
+  "openingHours":"Mo-Fr 07:30-18:30",
+  "priceRange":"€€",
+  "sameAs":["https://www.facebook.com/profile.php?id=100033117522430"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Quels travaux réalise A.L.O Concept ?","acceptedAnswer":{"@type":"Answer","text":"A.L.O Concept réalise la charpente traditionnelle, l'ossature bois, la pose de véranda, la réfection et l'entretien de toiture dans tout le Lot-et-Garonne (47)."}},
+    {"@type":"Question","name":"Kévin Alonso intervient-il rapidement ?","acceptedAnswer":{"@type":"Answer","text":"Oui — les clients soulignent des délais d'intervention records et toujours respectés. Appelez le 06 43 72 00 02 pour un devis."}},
+    {"@type":"Question","name":"A.L.O Concept propose-t-il des devis gratuits ?","acceptedAnswer":{"@type":"Answer","text":"Oui, le devis est gratuit et sans engagement. Contactez Kévin Alonso au 06 43 72 00 02 ou via le formulaire."}}
+  ]
+}
+</script>
+
+<style>
+:root{
+  --bg:#050905;
+  --bg2:#07100A;
+  --bg3:#0A150B;
+  --amber:#C4781A;
+  --gold:#E09530;
+  --pine:#F0B558;
+  --bark:#8B4E10;
+  --text:#F2EAD5;
+  --text2:#A8987A;
+  --text3:#5C5040;
+  --card:#rgba(10,21,11,0.85);
+  --border:rgba(196,120,26,0.14);
+  --border2:rgba(196,120,26,0.26);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Epilogue',sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  overflow-x:hidden;
+  cursor:none;
+}
+
+/* ——— CURSOR ——— */
+#cur-dot{
+  position:fixed;width:7px;height:7px;
+  background:var(--gold);border-radius:50%;
+  pointer-events:none;z-index:9999;
+  transform:translate(-50%,-50%);
+  transition:transform .08s;
+}
+#cur-glow{
+  position:fixed;width:320px;height:320px;
+  background:radial-gradient(circle,rgba(224,149,48,.09) 0%,rgba(196,120,26,.04) 45%,transparent 70%);
+  pointer-events:none;z-index:9998;
+  transform:translate(-50%,-50%);
+  transition:transform .055s linear;
+  border-radius:50%;
+}
+
+/* ——— GRAIN ——— */
+#grain{
+  position:fixed;inset:0;pointer-events:none;z-index:9997;opacity:.038;
+}
+
+/* ——— PARTICLES ——— */
+#ptc{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.55;}
+
+/* ——— KEYFRAMES ——— */
+@keyframes fadeUp{from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:translateY(0)}}
+@keyframes shimmer{
+  0%{background-position:200% center}
+  100%{background-position:-200% center}
+}
+@keyframes borderPulse{
+  0%,100%{border-color:rgba(196,120,26,.14)}
+  50%{border-color:rgba(224,149,48,.45)}
+}
+@keyframes floatY{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-14px)}
+}
+@keyframes drawIn{
+  from{stroke-dashoffset:1}
+  to{stroke-dashoffset:0}
+}
+@keyframes glowPulse{
+  0%,100%{opacity:.5}
+  50%{opacity:1}
+}
+@keyframes rotateSlow{
+  from{transform:rotate(0deg)}
+  to{transform:rotate(360deg)}
+}
+
+.fade-up{opacity:0;transform:translateY(36px);transition:opacity .7s ease,transform .7s ease;}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+
+/* ——— NAVBAR ——— */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 36px;height:70px;
+  background:rgba(5,9,5,.88);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-logo-main{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:18px;
+  letter-spacing:.06em;color:var(--text);
+}
+.nav-logo-main span{color:var(--amber);}
+.nav-badge{
+  font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  background:rgba(196,120,26,.12);border:1px solid rgba(196,120,26,.28);
+  color:var(--amber);padding:3px 10px;border-radius:20px;
+}
+.nav-right{display:flex;align-items:center;gap:18px;}
+.nav-tel{
+  font-weight:600;font-size:14px;color:var(--text2);text-decoration:none;
+  letter-spacing:.02em;transition:color .2s;
+}
+.nav-tel:hover{color:var(--gold);}
+.btn-nav{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:700;
+  font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+  background:linear-gradient(135deg,var(--amber),var(--gold));
+  color:#040804;padding:10px 20px;border-radius:3px;
+  text-decoration:none;border:none;cursor:pointer;
+  transition:all .2s;white-space:nowrap;
+}
+.btn-nav:hover{filter:brightness(1.1);transform:translateY(-1px);box-shadow:0 8px 24px rgba(224,149,48,.28);}
+
+/* ——— HERO ——— */
+.hero{
+  position:relative;min-height:100vh;
+  display:flex;align-items:center;
+  padding:90px 5% 60px;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;z-index:0;
+  background:
+    radial-gradient(ellipse 55% 90% at 15% 50%,rgba(196,120,26,.13) 0%,transparent 65%),
+    radial-gradient(ellipse 70% 50% at 70% 20%,rgba(6,16,5,.9) 0%,transparent 70%),
+    radial-gradient(ellipse 100% 40% at 50% 100%,rgba(3,6,3,.95) 0%,transparent 80%),
+    linear-gradient(160deg,#050905 0%,#080E07 60%,#050905 100%);
+}
+.hero-grid{
+  position:absolute;inset:0;z-index:1;
+  background-image:
+    linear-gradient(rgba(196,120,26,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(196,120,26,.035) 1px,transparent 1px);
+  background-size:52px 52px;
+  mask-image:radial-gradient(ellipse 70% 80% at 25% 50%,black 0%,transparent 65%);
+  -webkit-mask-image:radial-gradient(ellipse 70% 80% at 25% 50%,black 0%,transparent 65%);
+}
+.hero-inner{
+  position:relative;z-index:2;
+  width:100%;display:flex;align-items:center;justify-content:space-between;
+  gap:40px;
+}
+.hero-left{flex:1;max-width:580px;}
+
+.hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:26px;}
+.eyebrow-line{width:38px;height:2px;background:linear-gradient(90deg,var(--amber),var(--gold));}
+.eyebrow-text{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);}
+
+h1{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;
+  line-height:.88;font-size:clamp(60px,8.5vw,108px);
+  color:var(--text);margin-bottom:24px;
+  letter-spacing:-.02em;
+}
+h1 .city{
+  display:inline;
+  background:linear-gradient(130deg,var(--pine) 0%,var(--gold) 35%,var(--amber) 65%,var(--bark) 100%);
+  background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  filter:drop-shadow(0 0 48px rgba(224,149,48,.42)) drop-shadow(0 0 18px rgba(196,120,26,.35));
+  animation:shimmer 5s linear infinite;
+}
+.hero-sub{
+  font-size:15px;color:var(--text2);line-height:1.7;
+  margin-bottom:34px;max-width:430px;font-weight:400;
+}
+.hero-sub strong{color:var(--text);font-weight:600;}
+
+.pills{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:38px;}
+.pill{
+  display:flex;align-items:center;gap:7px;
+  background:rgba(196,120,26,.07);
+  border:1px solid rgba(196,120,26,.18);
+  backdrop-filter:blur(12px);
+  padding:7px 15px;border-radius:40px;
+  font-size:11px;font-weight:500;color:var(--text2);
+  letter-spacing:.04em;
+}
+.pill-icon{color:var(--amber);width:13px;height:13px;flex-shrink:0;}
+
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-primary{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:700;
+  font-size:14px;letter-spacing:.09em;text-transform:uppercase;
+  background:linear-gradient(135deg,var(--amber),var(--gold));
+  color:#040804;padding:16px 28px;border-radius:3px;
+  text-decoration:none;border:none;cursor:pointer;
+  transition:all .25s;display:flex;align-items:center;gap:8px;
+}
+.btn-primary:hover{filter:brightness(1.12);transform:translateY(-2px);box-shadow:0 14px 36px rgba(224,149,48,.32);}
+.btn-secondary{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:700;
+  font-size:14px;letter-spacing:.09em;text-transform:uppercase;
+  background:transparent;color:var(--text);
+  border:1px solid rgba(196,120,26,.28);
+  padding:16px 28px;border-radius:3px;
+  text-decoration:none;cursor:pointer;transition:all .25s;
+}
+.btn-secondary:hover{border-color:var(--amber);color:var(--amber);background:rgba(196,120,26,.05);}
+
+/* ——— HERO RIGHT ——— */
+.hero-right{
+  position:relative;width:440px;height:520px;flex-shrink:0;
+  display:flex;flex-direction:column;justify-content:space-between;
+  padding-top:10px;
+}
+.hero-deco-stack{
+  pointer-events:none;user-select:none;
+  line-height:.82;
+}
+.hero-deco-word{
+  display:block;
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;
+  font-size:clamp(56px,7vw,88px);letter-spacing:-.02em;
+  color:transparent;
+  -webkit-text-stroke:1px rgba(196,120,26,.1);
+  white-space:nowrap;
+}
+.hero-deco-word.accent{-webkit-text-stroke:1px rgba(196,120,26,.22);}
+
+.hero-svg-zone{
+  position:relative;flex:1;
+  display:flex;align-items:center;justify-content:center;
+  animation:floatY 6s ease-in-out infinite;
+}
+.hero-svg-zone::after{
+  content:'';position:absolute;bottom:0;left:10%;right:10%;height:60px;
+  background:radial-gradient(ellipse 80% 100% at 50% 100%,rgba(196,120,26,.18) 0%,transparent 70%);
+}
+
+.hero-stat-row{
+  display:flex;gap:12px;
+}
+.stat-card{
+  flex:1;
+  background:rgba(10,21,11,.7);
+  border:1px solid rgba(196,120,26,.14);
+  border-radius:6px;padding:14px 16px;
+  backdrop-filter:blur(16px);
+  animation:borderPulse 3.5s ease-in-out infinite;
+}
+.stat-card:nth-child(2){animation-delay:.8s;}
+.stat-card:nth-child(3){animation-delay:1.6s;}
+.stat-val{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;
+  font-size:28px;letter-spacing:-.02em;
+  background:linear-gradient(135deg,var(--gold),var(--amber));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.stat-val.shimmer-num{
+  background:linear-gradient(90deg,var(--amber) 0%,var(--pine) 30%,var(--gold) 50%,var(--pine) 70%,var(--amber) 100%);
+  background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:shimmer 2.8s linear infinite;
+}
+.stat-lbl{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-top:3px;}
+
+/* ——— URGENCE STRIP ——— */
+.urgence-strip{
+  position:relative;z-index:2;
+  background:linear-gradient(90deg,var(--bark),var(--amber),var(--gold),var(--amber),var(--bark));
+  background-size:300% 100%;
+  animation:shimmer 4s linear infinite;
+  padding:14px 5%;
+  display:flex;align-items:center;justify-content:center;gap:16px;
+  flex-wrap:wrap;
+}
+.urgence-strip p{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:700;
+  font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:#040804;
+}
+.urgence-tel{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;
+  font-size:16px;letter-spacing:.04em;color:#040804;
+  text-decoration:none;border-bottom:2px solid rgba(4,8,4,.3);
+  transition:border-color .2s;
+}
+.urgence-sep{color:rgba(4,8,4,.4);font-size:18px;}
+
+/* ——— SECTION COMMONS ——— */
+section{position:relative;z-index:2;padding:100px 5%;}
+.section-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:18px;}
+.section-eyebrow-line{width:32px;height:2px;background:linear-gradient(90deg,var(--amber),var(--gold));}
+.section-eyebrow-text{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);}
+.section-title{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;
+  font-size:clamp(36px,5vw,58px);line-height:.92;
+  color:var(--text);margin-bottom:16px;letter-spacing:-.02em;
+}
+.section-sub{font-size:15px;color:var(--text2);max-width:500px;line-height:1.7;}
+
+/* ——— SERVICES ——— */
+#services{background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%);}
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;margin-top:56px;
+}
+.svc-card{
+  background:rgba(10,21,11,.8);
+  border:1px solid rgba(196,120,26,.14);
+  border-radius:8px;padding:32px 28px;
+  transition:all .3s;cursor:default;
+  transform-style:preserve-3d;
+  position:relative;overflow:hidden;
+}
+.svc-card::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(196,120,26,.08) 0%,transparent 60%);
+  opacity:0;transition:opacity .3s;
+}
+.svc-card:hover::before{opacity:1;}
+.svc-card:hover{
+  border-color:rgba(196,120,26,.32);
+  box-shadow:0 20px 48px rgba(0,0,0,.4),0 0 0 1px rgba(196,120,26,.1);
+  transform:perspective(600px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateZ(4px);
+}
+.svc-icon{
+  width:44px;height:44px;margin-bottom:20px;
+  background:rgba(196,120,26,.1);border:1px solid rgba(196,120,26,.22);
+  border-radius:8px;display:flex;align-items:center;justify-content:center;
+}
+.svc-icon svg{color:var(--amber);width:22px;height:22px;}
+.svc-name{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;
+  font-size:20px;letter-spacing:.01em;color:var(--text);margin-bottom:10px;
+}
+.svc-desc{font-size:13px;color:var(--text2);line-height:1.65;}
+
+/* ——— PROCESS ——— */
+#process{
+  background:linear-gradient(180deg,var(--bg2) 0%,var(--bg3) 100%);
+}
+.process-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  margin-top:56px;position:relative;
+}
+.process-grid::before{
+  content:'';position:absolute;top:36px;left:12%;right:12%;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(196,120,26,.3) 20%,rgba(196,120,26,.3) 80%,transparent);
+}
+.proc-item{padding:20px 24px;text-align:center;}
+.proc-num{
+  width:72px;height:72px;border-radius:50%;margin:0 auto 20px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(10,21,11,.9);
+  border:1px solid rgba(196,120,26,.3);
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;
+  font-size:24px;color:var(--amber);position:relative;z-index:1;
+}
+.proc-title{font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:16px;color:var(--text);margin-bottom:8px;letter-spacing:.02em;}
+.proc-desc{font-size:12px;color:var(--text2);line-height:1.6;}
+
+/* ——— CERTIFICATIONS ——— */
+.certs-bar{
+  position:relative;z-index:2;
+  background:rgba(10,21,11,.7);backdrop-filter:blur(20px);
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:28px 5%;
+  display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;
+}
+.cert-item{display:flex;align-items:center;gap:10px;}
+.cert-icon{color:var(--amber);width:18px;height:18px;flex-shrink:0;}
+.cert-text{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text2);}
+
+/* ——— AVIS ——— */
+#avis{background:linear-gradient(180deg,var(--bg3) 0%,var(--bg) 100%);}
+.avis-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;flex-wrap:wrap;gap:20px;}
+.avis-score{display:flex;align-items:center;gap:16px;}
+.score-num{font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:72px;line-height:1;color:var(--gold);}
+.score-meta{display:flex;flex-direction:column;gap:4px;}
+.score-stars{display:flex;gap:3px;}
+.score-stars svg{color:var(--gold);width:20px;height:20px;}
+.score-count{font-size:12px;color:var(--text3);letter-spacing:.06em;}
+.avis-nav{display:flex;gap:8px;}
+.avis-btn{
+  width:42px;height:42px;border-radius:50%;
+  background:rgba(196,120,26,.1);border:1px solid rgba(196,120,26,.22);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:all .2s;color:var(--text2);
+}
+.avis-btn:hover{background:rgba(196,120,26,.22);color:var(--gold);}
+.avis-btn svg{width:16px;height:16px;}
+
+.carousel-wrap{overflow:hidden;position:relative;}
+.carousel-track{
+  display:flex;gap:16px;
+  transition:transform .5s cubic-bezier(.4,0,.2,1);
+  will-change:transform;cursor:grab;
+  user-select:none;
+}
+.carousel-track:active{cursor:grabbing;}
+.review-card{
+  flex:0 0 340px;
+  background:rgba(10,21,11,.85);
+  border:1px solid rgba(196,120,26,.14);
+  border-radius:8px;padding:28px 24px;
+  backdrop-filter:blur(16px);
+  transition:border-color .3s;
+}
+.review-card:hover{border-color:rgba(196,120,26,.28);}
+.review-stars{display:flex;gap:3px;margin-bottom:14px;}
+.review-stars svg{color:var(--gold);width:14px;height:14px;}
+.review-text{font-size:13px;color:var(--text2);line-height:1.7;margin-bottom:16px;font-style:italic;}
+.review-footer{display:flex;align-items:center;justify-content:space-between;}
+.review-author{font-weight:600;font-size:13px;color:var(--text);}
+.review-date{font-size:11px;color:var(--text3);}
+.review-tag{
+  font-size:10px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;
+  background:rgba(196,120,26,.1);border:1px solid rgba(196,120,26,.2);
+  color:var(--amber);padding:2px 8px;border-radius:12px;margin-top:8px;display:inline-block;
+}
+
+/* ——— ZONE ——— */
+#zone{background:var(--bg2);}
+.zone-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:56px;}
+.zone-list{display:flex;flex-direction:column;gap:10px;}
+.zone-item{
+  display:flex;align-items:center;gap:12px;padding:12px 16px;
+  background:rgba(10,21,11,.7);border:1px solid var(--border);border-radius:6px;
+  font-size:13px;font-weight:500;color:var(--text2);
+}
+.zone-dot{width:6px;height:6px;border-radius:50%;background:var(--amber);flex-shrink:0;}
+.map-frame{
+  border-radius:8px;overflow:hidden;
+  border:1px solid var(--border);
+  height:320px;
+}
+.map-frame iframe{width:100%;height:100%;display:block;border:none;filter:invert(90%) hue-rotate(150deg) saturate(.6) brightness(.85);}
+
+/* ——— ABOUT ——— */
+#about{
+  background:linear-gradient(180deg,var(--bg2) 0%,var(--bg3) 100%);
+}
+.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.about-visual{position:relative;}
+.about-avatar{
+  width:280px;height:280px;border-radius:12px;
+  background:rgba(10,21,11,.9);border:1px solid rgba(196,120,26,.22);
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;position:relative;
+}
+.about-avatar-letters{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;
+  font-size:80px;color:rgba(196,120,26,.18);letter-spacing:-.04em;
+}
+.about-deco{
+  position:absolute;top:-16px;right:-16px;
+  width:80px;height:80px;border-radius:50%;
+  background:rgba(196,120,26,.08);border:1px solid rgba(196,120,26,.2);
+  display:flex;align-items:center;justify-content:center;
+  flex-direction:column;gap:2px;
+}
+.about-deco-num{font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:22px;color:var(--gold);}
+.about-deco-txt{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);}
+.about-title{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;
+  font-size:clamp(32px,4vw,48px);color:var(--text);margin-bottom:8px;letter-spacing:-.02em;
+}
+.about-subtitle{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-bottom:20px;}
+.about-text{font-size:14px;color:var(--text2);line-height:1.75;margin-bottom:24px;}
+.about-highlights{display:flex;flex-direction:column;gap:10px;}
+.about-hl{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text2);}
+.about-hl svg{color:var(--amber);width:16px;height:16px;flex-shrink:0;}
+
+/* ——— CTA + FORM ——— */
+#contact{
+  background:linear-gradient(180deg,var(--bg3) 0%,var(--bg) 100%);
+}
+.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+.contact-copy .section-title{font-size:clamp(36px,4.5vw,54px);}
+.contact-copy .section-sub{margin-bottom:32px;}
+.contact-info{display:flex;flex-direction:column;gap:14px;}
+.contact-info-item{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--text2);}
+.contact-info-item svg{color:var(--amber);width:18px;height:18px;flex-shrink:0;}
+.contact-info-item a{color:inherit;text-decoration:none;transition:color .2s;}
+.contact-info-item a:hover{color:var(--gold);}
+
+.contact-form{
+  background:rgba(10,21,11,.85);backdrop-filter:blur(20px);
+  border:1px solid rgba(196,120,26,.18);border-radius:10px;
+  padding:36px;
+}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;}
+.form-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);}
+.form-input,.form-select,.form-textarea{
+  background:rgba(5,9,5,.8);border:1px solid rgba(196,120,26,.2);
+  border-radius:4px;padding:12px 14px;
+  font-family:'Epilogue',sans-serif;font-size:14px;color:var(--text);
+  outline:none;transition:border-color .2s;width:100%;
+  -webkit-appearance:none;
+}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--amber);}
+.form-input::placeholder,.form-textarea::placeholder{color:var(--text3);}
+.form-select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C4781A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;}
+.form-select option{background:#050905;color:var(--text);}
+.form-textarea{resize:vertical;min-height:100px;}
+.btn-submit{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:700;
+  font-size:15px;letter-spacing:.1em;text-transform:uppercase;
+  background:linear-gradient(135deg,var(--amber),var(--gold));
+  color:#040804;padding:16px 24px;border-radius:3px;
+  border:none;cursor:pointer;width:100%;
+  transition:all .25s;margin-top:4px;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+}
+.btn-submit:hover{filter:brightness(1.1);transform:translateY(-2px);box-shadow:0 12px 32px rgba(224,149,48,.3);}
+.form-note{font-size:11px;color:var(--text3);text-align:center;margin-top:12px;}
+
+/* ——— FOOTER ——— */
+footer{
+  position:relative;z-index:2;
+  background:rgba(3,6,3,.98);
+  border-top:1px solid var(--border);
+  padding:40px 5%;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:20px;
+}
+.footer-brand{
+  font-family:'Big Shoulders Display',sans-serif;font-weight:900;
+  font-size:16px;letter-spacing:.06em;color:var(--text2);
+}
+.footer-brand span{color:var(--amber);}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+.footer-links a{font-size:12px;color:var(--text3);text-decoration:none;transition:color .2s;letter-spacing:.04em;}
+.footer-links a:hover{color:var(--amber);}
+.footer-copy{font-size:11px;color:var(--text3);}
+
+/* ——— STICKY MOBILE BAR ——— */
+.mobile-bar{
+  display:none;position:fixed;bottom:0;left:0;right:0;z-index:300;
+  display:none;
+  background:rgba(5,9,5,.95);backdrop-filter:blur(20px);
+  border-top:1px solid rgba(196,120,26,.2);
+  padding:12px 16px 16px;gap:10px;
+}
+.mobile-bar a{
+  flex:1;display:flex;align-items:center;justify-content:center;gap:7px;
+  font-family:'Big Shoulders Display',sans-serif;font-weight:700;
+  font-size:13px;letter-spacing:.07em;text-transform:uppercase;
+  padding:13px 12px;border-radius:4px;text-decoration:none;transition:all .2s;
+}
+.mb-call{background:linear-gradient(135deg,var(--amber),var(--gold));color:#040804;}
+.mb-devis{background:rgba(196,120,26,.12);border:1px solid rgba(196,120,26,.25);color:var(--text);}
+.mb-call:hover{filter:brightness(1.08);}
+.mb-devis:hover{background:rgba(196,120,26,.2);}
+.mb-icon{width:16px;height:16px;}
+
+@media(max-width:768px){
+  .mobile-bar{display:flex;}
+  body{padding-bottom:80px;}
+  nav{padding:0 20px;height:62px;}
+  .nav-tel,.nav-badge{display:none;}
+  h1{font-size:clamp(52px,14vw,80px);}
+  .hero{padding:80px 5% 50px;}
+  .hero-inner{flex-direction:column;}
+  .hero-right{width:100%;height:auto;order:-1;}
+  .hero-deco-stack{display:none;}
+  .hero-stat-row{display:none;}
+  .hero-svg-zone{height:240px;}
+  .services-grid{grid-template-columns:1fr;}
+  .process-grid{grid-template-columns:1fr 1fr;}
+  .process-grid::before{display:none;}
+  .zone-grid{grid-template-columns:1fr;}
+  .about-inner{grid-template-columns:1fr;}
+  .contact-inner{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+  section{padding:70px 5%;}
+  .certs-bar{gap:24px;}
+  .avis-header{flex-direction:column;align-items:flex-start;}
+}
+@media(max-width:1024px){
+  .hero-right{width:360px;height:420px;}
+  .hero-deco-word{font-size:60px;}
+  .services-grid{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div id="cur-dot"></div>
+<div id="cur-glow"></div>
+
+<!-- GRAIN -->
+<canvas id="grain"></canvas>
+
+<!-- PARTICLES -->
+<canvas id="ptc"></canvas>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    <span class="nav-logo-main">A.L.O <span>CONCEPT</span></span>
+    <span class="nav-badge">Agen · 47</span>
+  </a>
+  <div class="nav-right">
+    <a href="tel:0643720002" class="nav-tel">06 43 72 00 02</a>
+    <a href="#contact" class="btn-nav">Devis gratuit</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+
+    <!-- LEFT -->
+    <div class="hero-left fade-up">
+      <div class="hero-eyebrow">
+        <div class="eyebrow-line"></div>
+        <span class="eyebrow-text">Artisan charpentier — Lot-et-Garonne</span>
+      </div>
+      <h1>Votre<br>charpentier<br>à <span class="city" id="city-scramble">AGEN</span></h1>
+      <p class="hero-sub"><strong>Kévin Alonso</strong> — charpente traditionnelle, véranda sur mesure, ossature bois et toiture. Délais d'intervention records, engagements toujours tenus.</p>
+      <div class="pills">
+        <span class="pill">
+          <svg class="pill-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          5★ · 9 avis Google
+        </span>
+        <span class="pill">
+          <svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Délais respectés
+        </span>
+        <span class="pill">
+          <svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          Devis gratuit
+        </span>
+        <span class="pill">
+          <svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Lot-et-Garonne (47)
+        </span>
+      </div>
+      <div class="hero-ctas">
+        <a href="tel:0643720002" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.09 1.18 2 2 0 012.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          06 43 72 00 02
+        </a>
+        <a href="#contact" class="btn-secondary">Demander un devis</a>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="hero-right">
+      <!-- DECO TYPO -->
+      <div class="hero-deco-stack">
+        <span class="hero-deco-word">CONCEPT</span>
+        <span class="hero-deco-word accent">BOIS</span>
+        <span class="hero-deco-word">ALO</span>
+      </div>
+
+      <!-- HERO SVG -->
+      <div class="hero-svg-zone">
+        <svg viewBox="0 0 440 340" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:440px;filter:drop-shadow(0 0 32px rgba(196,120,26,.2))" aria-hidden="true">
+          <defs>
+            <linearGradient id="beamGold" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#C4781A"/>
+              <stop offset="50%" stop-color="#E09530"/>
+              <stop offset="100%" stop-color="#8B4E10"/>
+            </linearGradient>
+            <linearGradient id="beamDark" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7A3E0A" stop-opacity=".9"/>
+              <stop offset="100%" stop-color="#3D1F05" stop-opacity=".8"/>
+            </linearGradient>
+            <linearGradient id="beamLight" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#F0B558" stop-opacity=".6"/>
+              <stop offset="100%" stop-color="#C4781A" stop-opacity=".3"/>
+            </linearGradient>
+            <linearGradient id="glowAmber" x1="50%" y1="0%" x2="50%" y2="100%">
+              <stop offset="0%" stop-color="#E09530" stop-opacity=".5"/>
+              <stop offset="100%" stop-color="#C4781A" stop-opacity="0"/>
+            </linearGradient>
+            <!-- Wood grain pattern -->
+            <pattern id="grain1" patternUnits="userSpaceOnUse" width="8" height="40" patternTransform="rotate(2)">
+              <line x1="4" y1="0" x2="4" y2="40" stroke="rgba(240,181,88,0.12)" stroke-width=".8"/>
+              <line x1="2" y1="10" x2="3" y2="50" stroke="rgba(240,181,88,0.06)" stroke-width=".5"/>
+            </pattern>
+            <pattern id="grain2" patternUnits="userSpaceOnUse" width="6" height="36" patternTransform="rotate(-1)">
+              <line x1="3" y1="0" x2="3" y2="36" stroke="rgba(196,120,26,0.1)" stroke-width=".6"/>
+            </pattern>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+            </filter>
+          </defs>
+
+          <!-- AMBIENT GLOW -->
+          <ellipse cx="220" cy="280" rx="180" ry="40" fill="url(#glowAmber)" opacity=".4"/>
+          <ellipse cx="220" cy="170" rx="120" ry="100" fill="rgba(196,120,26,.04)"/>
+
+          <!-- GROUND SHADOW -->
+          <ellipse cx="220" cy="316" rx="160" ry="12" fill="rgba(0,0,0,.5)"/>
+
+          <!-- ====== TIMBER FRAME — perspective assembled corner ====== -->
+
+          <!-- HORIZONTAL BEAM (sablière) — top face -->
+          <polygon points="30,160 410,160 410,172 30,172" fill="url(#beamGold)" opacity=".85"/>
+          <polygon points="30,160 410,160 410,172 30,172" fill="url(#grain1)"/>
+          <!-- front face -->
+          <polygon points="30,172 410,172 410,200 30,200" fill="url(#beamDark)" opacity=".9"/>
+          <polygon points="30,172 410,172 410,200 30,200" fill="url(#grain2)"/>
+          <!-- bottom highlight line -->
+          <line x1="30" y1="200" x2="410" y2="200" stroke="rgba(240,181,88,.15)" stroke-width="1"/>
+          <!-- grain lines on top face -->
+          <line x1="80" y1="160" x2="80" y2="172" stroke="rgba(139,78,16,.4)" stroke-width=".8"/>
+          <line x1="150" y1="160" x2="150" y2="172" stroke="rgba(139,78,16,.3)" stroke-width=".8"/>
+          <line x1="240" y1="160" x2="240" y2="172" stroke="rgba(139,78,16,.35)" stroke-width=".8"/>
+          <line x1="320" y1="160" x2="320" y2="172" stroke="rgba(139,78,16,.3)" stroke-width=".8"/>
+          <line x1="370" y1="160" x2="370" y2="172" stroke="rgba(139,78,16,.25)" stroke-width=".8"/>
+
+          <!-- VERTICAL POST LEFT (poteau gauche) — right face -->
+          <polygon points="60,30 80,30 80,200 60,200" fill="url(#beamDark)" opacity=".85"/>
+          <polygon points="60,30 80,30 80,200 60,200" fill="url(#grain2)"/>
+          <!-- left face -->
+          <polygon points="44,42 60,30 60,200 44,212" fill="url(#beamGold)" opacity=".6"/>
+          <polygon points="44,42 60,30 60,200 44,212" fill="url(#grain1)"/>
+          <!-- top face -->
+          <polygon points="44,42 60,30 80,30 64,42" fill="url(#beamLight)" opacity=".8"/>
+
+          <!-- VERTICAL POST RIGHT (poteau droit) -->
+          <polygon points="360,30 380,30 380,200 360,200" fill="url(#beamDark)" opacity=".85"/>
+          <polygon points="360,30 380,30 380,200 360,200" fill="url(#grain2)"/>
+          <polygon points="344,42 360,30 360,200 344,212" fill="url(#beamGold)" opacity=".5"/>
+          <polygon points="344,42 360,30 380,30 364,42" fill="url(#beamLight)" opacity=".8"/>
+
+          <!-- DIAGONAL BRACE LEFT (contrefiche) -->
+          <polygon points="62,80 80,70 130,155 112,165" fill="url(#beamGold)" opacity=".75"/>
+          <polygon points="62,80 80,70 130,155 112,165" fill="url(#grain1)"/>
+          <polygon points="62,80 80,70 68,82 50,92" fill="url(#beamDark)" opacity=".6"/>
+
+          <!-- DIAGONAL BRACE RIGHT (contrefiche) -->
+          <polygon points="362,80 380,70 330,155 312,165" fill="url(#beamGold)" opacity=".75"/>
+          <polygon points="362,80 380,70 330,155 312,165" fill="url(#grain1)"/>
+          <polygon points="362,80 380,70 368,82 350,92" fill="url(#beamDark)" opacity=".6"/>
+
+          <!-- RAFTERS / ARBALÉTRIERS -->
+          <!-- Left rafter -->
+          <polygon points="64,30 90,22 222,148 196,156" fill="url(#beamGold)" opacity=".9"/>
+          <polygon points="64,30 90,22 222,148 196,156" fill="url(#grain1)"/>
+          <!-- face gauche rafter left -->
+          <polygon points="64,30 78,36 210,162 196,156" fill="url(#beamDark)" opacity=".7"/>
+          <!-- Right rafter -->
+          <polygon points="362,30 376,36 250,162 236,156" fill="url(#beamDark)" opacity=".7"/>
+          <polygon points="376,36 390,30 358,30 344,36" fill="url(#beamGold)" opacity=".8"/>
+          <polygon points="390,30 376,36 250,162 264,156" fill="url(#beamGold)" opacity=".9"/>
+          <polygon points="390,30 376,36 250,162 264,156" fill="url(#grain1)"/>
+
+          <!-- RIDGE BEAM (faîtière) — top -->
+          <polygon points="200,148 240,148 250,160 210,160" fill="url(#beamGold)" opacity=".9"/>
+          <polygon points="200,148 240,148 240,164 200,164" fill="url(#beamDark)" opacity=".85"/>
+          <polygon points="200,164 240,164 250,160 210,160" fill="url(#beamDark)" opacity=".6"/>
+
+          <!-- KING POST (poinçon) -->
+          <polygon points="210,46 230,46 240,148 200,148" fill="url(#beamGold)" opacity=".85"/>
+          <polygon points="210,46 230,46 240,148 200,148" fill="url(#grain1)"/>
+          <polygon points="194,58 210,46 200,148 184,160" fill="url(#beamDark)" opacity=".6"/>
+          <!-- top of king post -->
+          <polygon points="194,58 210,46 230,46 214,58" fill="url(#beamLight)" opacity=".9"/>
+
+          <!-- COLLAR BEAM (entrait retroussé) -->
+          <polygon points="112,112 328,112 328,120 112,120" fill="url(#beamGold)" opacity=".8"/>
+          <polygon points="112,120 328,120 328,130 112,130" fill="url(#beamDark)" opacity=".8"/>
+
+          <!-- MORTISE / TENON DETAIL CIRCLES (joint markers) -->
+          <circle cx="70" cy="160" r="6" fill="none" stroke="rgba(240,181,88,.5)" stroke-width="1.5"/>
+          <circle cx="70" cy="160" r="3" fill="rgba(196,120,26,.4)"/>
+          <circle cx="370" cy="160" r="6" fill="none" stroke="rgba(240,181,88,.5)" stroke-width="1.5"/>
+          <circle cx="370" cy="160" r="3" fill="rgba(196,120,26,.4)"/>
+          <circle cx="220" cy="148" r="7" fill="none" stroke="rgba(240,181,88,.55)" stroke-width="1.5"/>
+          <circle cx="220" cy="148" r="3.5" fill="rgba(196,120,26,.45)"/>
+
+          <!-- ANNOTATION LINES (blueprint style) -->
+          <line x1="30" y1="144" x2="80" y2="144" stroke="rgba(196,120,26,.2)" stroke-width=".8" stroke-dasharray="3,4"/>
+          <line x1="30" y1="200" x2="80" y2="200" stroke="rgba(196,120,26,.2)" stroke-width=".8" stroke-dasharray="3,4"/>
+          <line x1="36" y1="144" x2="36" y2="200" stroke="rgba(196,120,26,.2)" stroke-width=".8"/>
+          <line x1="34" y1="144" x2="38" y2="144" stroke="rgba(196,120,26,.3)" stroke-width=".8"/>
+          <line x1="34" y1="200" x2="38" y2="200" stroke="rgba(196,120,26,.3)" stroke-width=".8"/>
+
+          <!-- Annotation text (dimension label) -->
+          <text x="14" y="175" font-size="7" fill="rgba(196,120,26,.5)" font-family="monospace" text-anchor="middle" writing-mode="vertical-rl">18 cm</text>
+
+          <line x1="200" y1="20" x2="200" y2="46" stroke="rgba(196,120,26,.2)" stroke-width=".8" stroke-dasharray="3,4"/>
+          <line x1="240" y1="20" x2="240" y2="46" stroke="rgba(196,120,26,.2)" stroke-width=".8" stroke-dasharray="3,4"/>
+          <line x1="200" y1="26" x2="240" y2="26" stroke="rgba(196,120,26,.2)" stroke-width=".8"/>
+          <text x="220" y="22" font-size="7" fill="rgba(196,120,26,.5)" font-family="monospace" text-anchor="middle">20 cm</text>
+
+          <!-- GLOW HIGHLIGHT on ridge -->
+          <ellipse cx="220" cy="40" rx="30" ry="8" fill="rgba(240,181,88,.12)"/>
+
+          <!-- CONSTRUCTION LINE GLOW on rafters -->
+          <line x1="75" y1="26" x2="216" y2="150" stroke="rgba(240,181,88,.07)" stroke-width="6" stroke-linecap="round"/>
+          <line x1="365" y1="26" x2="224" y2="150" stroke="rgba(240,181,88,.07)" stroke-width="6" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <!-- STAT CARDS -->
+      <div class="hero-stat-row">
+        <div class="stat-card">
+          <div class="stat-val shimmer-num">5★</div>
+          <div class="stat-lbl">Note Google</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">9</div>
+          <div class="stat-lbl">Avis clients</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">47</div>
+          <div class="stat-lbl">Lot-et-Garonne</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- URGENCE STRIP -->
+<div class="urgence-strip">
+  <p>Intervention rapide — délais records</p>
+  <span class="urgence-sep">·</span>
+  <a href="tel:0643720002" class="urgence-tel">06 43 72 00 02</a>
+  <span class="urgence-sep">·</span>
+  <p>Devis gratuit &amp; sans engagement</p>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-eyebrow fade-up">
+    <div class="section-eyebrow-line"></div>
+    <span class="section-eyebrow-text">Nos prestations</span>
+  </div>
+  <h2 class="section-title fade-up">Ce que<br>nous réalisons</h2>
+  <p class="section-sub fade-up">De la charpente traditionnelle à la véranda sur mesure — Kévin Alonso prend en charge l'ensemble de votre projet bois.</p>
+  <div class="services-grid">
+
+    <div class="svc-card fade-up">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div class="svc-name">Charpente Traditionnelle</div>
+      <p class="svc-desc">Fermes de comble, arbalétriers, pannes et faîtières taillés et assemblés à la main. Bois massif sec, assemblages tenon-mortaise, durabilité garantie.</p>
+    </div>
+
+    <div class="svc-card fade-up">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+      </div>
+      <div class="svc-name">Ossature Bois</div>
+      <p class="svc-desc">Conception et pose de structures en ossature bois pour maisons, extensions, garages et dépendances. Technique fiable, isolation intégrée.</p>
+    </div>
+
+    <div class="svc-card fade-up">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3M3 16v3a2 2 0 002 2h3m8 0h3a2 2 0 002-2v-3"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+      </div>
+      <div class="svc-name">Véranda Sur Mesure</div>
+      <p class="svc-desc">Extension lumineuse en bois pour agrandir votre espace de vie. Conception sur plans, charpente intégrée, finition soignée — résultat technique et esthétique.</p>
+    </div>
+
+    <div class="svc-card fade-up">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 20h20M4 20V10l8-8 8 8v10"/></svg>
+      </div>
+      <div class="svc-name">Réfection de Toiture</div>
+      <p class="svc-desc">Dépose et repose complète de couverture, remplacement de charpente abîmée, tuiles, ardoises ou bac acier. Étanchéité et durabilité assurées.</p>
+    </div>
+
+    <div class="svc-card fade-up">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      </div>
+      <div class="svc-name">Entretien &amp; Nettoyage</div>
+      <p class="svc-desc">Nettoyage haute pression, démoussage, traitement hydrofuge. Inspection préventive de votre toiture pour éviter les mauvaises surprises.</p>
+    </div>
+
+    <div class="svc-card fade-up">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+      </div>
+      <div class="svc-name">Zinguerie &amp; Couverture</div>
+      <p class="svc-desc">Pose de gouttières, chéneaux, noues et faîtages en zinc. Étanchéité des points singuliers, solins, raccords de cheminée.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="section-eyebrow fade-up">
+    <div class="section-eyebrow-line"></div>
+    <span class="section-eyebrow-text">Comment ça marche</span>
+  </div>
+  <h2 class="section-title fade-up">Notre processus</h2>
+  <div class="process-grid">
+    <div class="proc-item fade-up">
+      <div class="proc-num">01</div>
+      <div class="proc-title">Prise de contact</div>
+      <p class="proc-desc">Appelez ou écrivez — Kévin répond rapidement et fixe un rendez-vous.</p>
+    </div>
+    <div class="proc-item fade-up">
+      <div class="proc-num">02</div>
+      <div class="proc-title">Visite &amp; devis</div>
+      <p class="proc-desc">Déplacement sur place pour mesurer, écouter vos besoins et établir un devis précis.</p>
+    </div>
+    <div class="proc-item fade-up">
+      <div class="proc-num">03</div>
+      <div class="proc-title">Planification</div>
+      <p class="proc-desc">Une date d'intervention est arrêtée et tenue. Pas de mauvaise surprise sur les délais.</p>
+    </div>
+    <div class="proc-item fade-up">
+      <div class="proc-num">04</div>
+      <div class="proc-title">Réalisation</div>
+      <p class="proc-desc">Travail rigoureux, chantier propre, résultat technique et esthétique à la hauteur.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CERTS BAR -->
+<div class="certs-bar fade-up">
+  <div class="cert-item">
+    <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+    <span class="cert-text">Artisan qualifié</span>
+  </div>
+  <div class="cert-item">
+    <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+    <span class="cert-text">Assurance décennale</span>
+  </div>
+  <div class="cert-item">
+    <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    <span class="cert-text">Garantie biennale</span>
+  </div>
+  <div class="cert-item">
+    <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+    <span class="cert-text">Devis gratuit</span>
+  </div>
+  <div class="cert-item">
+    <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    <span class="cert-text">Lot-et-Garonne (47)</span>
+  </div>
+</div>
+
+<!-- AVIS -->
+<section id="avis">
+  <div class="avis-header fade-up">
+    <div>
+      <div class="section-eyebrow">
+        <div class="section-eyebrow-line"></div>
+        <span class="section-eyebrow-text">Avis clients Google</span>
+      </div>
+      <div class="avis-score">
+        <span class="score-num">5,0</span>
+        <div class="score-meta">
+          <div class="score-stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <span class="score-count">9 avis Google — 100% positifs</span>
+        </div>
+      </div>
+    </div>
+    <div class="avis-nav">
+      <button class="avis-btn" id="prev-btn" aria-label="Précédent">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="avis-btn" id="next-btn" aria-label="Suivant">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="carousel-wrap">
+    <div class="carousel-track" id="carousel">
+
+      <div class="review-card fade-up">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Nous avons choisi de faire travailler M. ALONSO pour l'entretien et le nettoyage de notre toiture... une prestation très professionnelle, avec des délais d'intervention records, et surtout... respectés !"</p>
+        <div class="review-footer">
+          <span class="review-author">ROQUES Romain</span>
+          <span class="review-date">Sept. 2024</span>
+        </div>
+        <span class="review-tag">Guide Local Google</span>
+      </div>
+
+      <div class="review-card fade-up">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"J'ai employé Monsieur Alonzo pour le toit de mon atelier, je suis ravi du travail effectué sur le plan technique et esthétique ! Monsieur Alonzo est très professionnel, il tient ses engagements ce qui pour moi est essentiel chez un artisan."</p>
+        <div class="review-footer">
+          <span class="review-author">Emile Garros</span>
+          <span class="review-date">Mai 2021</span>
+        </div>
+        <span class="review-tag">Guide Local Google</span>
+      </div>
+
+      <div class="review-card fade-up">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Nous avons fait réaliser notre véranda par Kévin Alonso et son apprenti. Rigoureux, rapides et très pro, nous sommes extrêmement satisfaits de leur travail. Nous recommandons vivement ALO CONCEPT pour vos travaux !"</p>
+        <div class="review-footer">
+          <span class="review-author">Mr Le Car &amp; Mme Patinec</span>
+          <span class="review-date">Nov. 2021</span>
+        </div>
+        <span class="review-tag">Guide Local Google</span>
+      </div>
+
+      <div class="review-card fade-up">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Monsieur ALONSO est plus que professionnel et surtout à l'écoute de son client. Je le recommande les yeux fermés. Encore merci à lui !"</p>
+        <div class="review-footer">
+          <span class="review-author">Mathilde Baudonnet</span>
+          <span class="review-date">Avr. 2021</span>
+        </div>
+      </div>
+
+      <div class="review-card fade-up">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Très bonne entreprise à l'écoute. Travail de qualité."</p>
+        <div class="review-footer">
+          <span class="review-author">Edmond Tovo</span>
+          <span class="review-date">Avr. 2025</span>
+        </div>
+      </div>
+
+      <div class="review-card fade-up">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Très bon professionnel, travail soigné, ponctualité, efficacité et bonne humeur. Je recommande en toute confiance."</p>
+        <div class="review-footer">
+          <span class="review-author">Sandrine LARDIT</span>
+          <span class="review-date">Fév. 2023</span>
+        </div>
+      </div>
+
+      <div class="review-card fade-up">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Personne très professionnelle et à l'écoute, il saura réaliser tout ce que vous lui demanderez."</p>
+        <div class="review-footer">
+          <span class="review-author">Elias Rollet</span>
+          <span class="review-date">Avr. 2023</span>
+        </div>
+      </div>
+
+      <div class="review-card fade-up">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Réactivité, ponctualité, qualité du travail, professionnalisme, rapport qualité-prix — 5 étoiles sur toute la ligne."</p>
+        <div class="review-footer">
+          <span class="review-author">Néoma Pastourely</span>
+          <span class="review-date">Mai 2023</span>
+        </div>
+        <span class="review-tag">Guide Local Google</span>
+      </div>
+
+      <div class="review-card fade-up">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Qualité du travail et professionnalisme au rendez-vous. Très satisfait."</p>
+        <div class="review-footer">
+          <span class="review-author">Camille Dalon</span>
+          <span class="review-date">Mai 2021</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ZONE -->
+<section id="zone">
+  <div class="section-eyebrow fade-up">
+    <div class="section-eyebrow-line"></div>
+    <span class="section-eyebrow-text">Zone d'intervention</span>
+  </div>
+  <h2 class="section-title fade-up">Lot-et-Garonne<br>&amp; alentours</h2>
+  <div class="zone-grid">
+    <div>
+      <p class="section-sub fade-up" style="margin-bottom:28px">A.L.O Concept intervient dans tout le Lot-et-Garonne (47) et les départements limitrophes.</p>
+      <div class="zone-list fade-up">
+        <div class="zone-item"><div class="zone-dot"></div>Agen &amp; agglomération</div>
+        <div class="zone-item"><div class="zone-dot"></div>Marmande</div>
+        <div class="zone-item"><div class="zone-dot"></div>Villeneuve-sur-Lot</div>
+        <div class="zone-item"><div class="zone-dot"></div>Nérac</div>
+        <div class="zone-item"><div class="zone-dot"></div>Tonneins</div>
+        <div class="zone-item"><div class="zone-dot"></div>Lot-et-Garonne (47)</div>
+      </div>
+    </div>
+    <div class="fade-up">
+      <div class="map-frame">
+        <iframe src="https://maps.google.com/maps?q=43.9141933,0.8658096&t=&z=11&ie=UTF8&output=embed" title="A.L.O Concept — Agen" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-inner">
+    <div class="about-visual fade-up">
+      <div class="about-avatar">
+        <span class="about-avatar-letters">KA</span>
+      </div>
+      <div class="about-deco">
+        <span class="about-deco-num">5★</span>
+        <span class="about-deco-txt">Google</span>
+      </div>
+    </div>
+    <div class="fade-up">
+      <div class="section-eyebrow">
+        <div class="section-eyebrow-line"></div>
+        <span class="section-eyebrow-text">L'artisan</span>
+      </div>
+      <h2 class="about-title">Kévin Alonso</h2>
+      <p class="about-subtitle">Artisan charpentier — A.L.O Concept</p>
+      <p class="about-text">Kévin Alonso est charpentier artisan basé à Agen, dans le Lot-et-Garonne. À la tête d'A.L.O Concept, il prend en charge personnellement chaque chantier — de la prise de mesure à la réception des travaux.<br><br>Ce que ses clients retiennent : des délais d'intervention records, toujours respectés, un soin du détail autant technique qu'esthétique, et une écoute réelle des besoins.</p>
+      <div class="about-highlights">
+        <div class="about-hl">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/></svg>
+          Délais d'intervention records — et respectés
+        </div>
+        <div class="about-hl">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/></svg>
+          À l'écoute de chaque client, sans compromis
+        </div>
+        <div class="about-hl">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/></svg>
+          Résultat technique et esthétique soigné
+        </div>
+        <div class="about-hl">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/></svg>
+          9 avis 5★ — 100% de clients satisfaits
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="contact-copy fade-up">
+      <div class="section-eyebrow">
+        <div class="section-eyebrow-line"></div>
+        <span class="section-eyebrow-text">Devis gratuit</span>
+      </div>
+      <h2 class="section-title">Un projet ?<br>Parlons-en.</h2>
+      <p class="section-sub">Kévin Alonso se déplace gratuitement pour étudier votre projet et vous remettre un devis détaillé. Réponse rapide garantie.</p>
+      <div class="contact-info">
+        <div class="contact-info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.09 1.18 2 2 0 012.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <a href="tel:0643720002">06 43 72 00 02</a>
+        </div>
+        <div class="contact-info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Agen, Lot-et-Garonne (47)
+        </div>
+        <div class="contact-info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Lun–Ven 7h30–18h30
+        </div>
+      </div>
+    </div>
+    <div class="fade-up">
+      <form class="contact-form" action="mailto:contact@alo-concept.fr" method="post" enctype="text/plain">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="nom">Nom</label>
+            <input class="form-input" type="text" id="nom" name="nom" placeholder="Votre nom" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="tel">Téléphone</label>
+            <input class="form-input" type="tel" id="tel" name="tel" placeholder="06 __ __ __ __" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="votre@email.fr">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="type">Type de travaux</label>
+          <select class="form-select" id="type" name="type">
+            <option value="">Sélectionner...</option>
+            <option>Charpente traditionnelle</option>
+            <option>Ossature bois</option>
+            <option>Véranda sur mesure</option>
+            <option>Réfection de toiture</option>
+            <option>Entretien / nettoyage toiture</option>
+            <option>Zinguerie</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="msg">Votre projet</label>
+          <textarea class="form-textarea" id="msg" name="msg" placeholder="Décrivez brièvement votre projet..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Envoyer ma demande
+        </button>
+        <p class="form-note">Devis gratuit · Sans engagement · Réponse rapide</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">A.L.O <span>CONCEPT</span> — Agen (47)</div>
+  <div class="footer-links">
+    <a href="#services">Services</a>
+    <a href="#avis">Avis</a>
+    <a href="#zone">Zone</a>
+    <a href="#contact">Contact</a>
+    <a href="https://www.facebook.com/profile.php?id=100033117522430" target="_blank" rel="noopener">Facebook</a>
+  </div>
+  <p class="footer-copy">© 2025 A.L.O Concept — Kévin Alonso</p>
+</footer>
+
+<!-- MOBILE BAR -->
+<div class="mobile-bar" style="display:flex">
+  <a href="tel:0643720002" class="mb-call">
+    <svg class="mb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.09 1.18 2 2 0 012.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    06 43 72 00 02
+  </a>
+  <a href="#contact" class="mb-devis">
+    <svg class="mb-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+    Devis gratuit
+  </a>
+</div>
+
+<script>
+/* ——— CURSOR ——— */
+const dot = document.getElementById('cur-dot');
+const glow = document.getElementById('cur-glow');
+let mx=window.innerWidth/2, my=window.innerHeight/2;
+let gx=mx, gy=my;
+document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; dot.style.left=mx+'px'; dot.style.top=my+'px'; });
+(function lerp(){
+  gx += (mx-gx)*.055; gy += (my-gy)*.055;
+  glow.style.left=gx+'px'; glow.style.top=gy+'px';
+  requestAnimationFrame(lerp);
+})();
+
+/* ——— GRAIN ——— */
+const gc = document.getElementById('grain');
+const gctx = gc.getContext('2d');
+function resizeGrain(){ gc.width=window.innerWidth; gc.height=window.innerHeight; }
+function drawGrain(){
+  const id = gctx.createImageData(gc.width, gc.height);
+  const d = id.data;
+  for(let i=0;i<d.length;i+=4){ const v=Math.random()*255|0; d[i]=d[i+1]=d[i+2]=v; d[i+3]=255; }
+  gctx.putImageData(id,0,0);
+}
+resizeGrain(); drawGrain();
+setInterval(drawGrain, 80);
+window.addEventListener('resize', resizeGrain);
+
+/* ——— SAWDUST PARTICLES ——— */
+const pc = document.getElementById('ptc');
+const pctx = pc.getContext('2d');
+function resizePtc(){ pc.width=window.innerWidth; pc.height=window.innerHeight; }
+resizePtc(); window.addEventListener('resize', resizePtc);
+const COLORS = ['rgba(196,120,26,','rgba(224,149,48,','rgba(240,181,88,','rgba(139,78,16,'];
+class Chip {
+  constructor(){this.reset(true);}
+  reset(init){
+    this.x = Math.random()*pc.width;
+    this.y = init ? Math.random()*pc.height : -20;
+    this.w = Math.random()*6+2;
+    this.h = Math.random()*2+1;
+    this.angle = Math.random()*Math.PI*2;
+    this.spin = (Math.random()-.5)*.04;
+    this.vy = Math.random()*0.8+0.3;
+    this.vx = (Math.random()-.5)*.4;
+    this.color = COLORS[Math.floor(Math.random()*COLORS.length)];
+    this.alpha = Math.random()*.5+.15;
+  }
+  update(){
+    this.y += this.vy; this.x += this.vx; this.angle += this.spin;
+    if(this.y > pc.height+20) this.reset(false);
+  }
+  draw(){
+    pctx.save();
+    pctx.translate(this.x, this.y);
+    pctx.rotate(this.angle);
+    pctx.fillStyle = this.color+this.alpha+')';
+    pctx.fillRect(-this.w/2, -this.h/2, this.w, this.h);
+    pctx.restore();
+  }
+}
+const chips = Array.from({length:90}, ()=>new Chip());
+(function animPtc(){
+  pctx.clearRect(0,0,pc.width,pc.height);
+  chips.forEach(c=>{c.update();c.draw();});
+  requestAnimationFrame(animPtc);
+})();
+
+/* ——— SCRAMBLE ——— */
+const cityEl = document.getElementById('city-scramble');
+const ORIG = 'AGEN';
+const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+function scramble(){
+  let iter=0;
+  const iv = setInterval(()=>{
+    cityEl.textContent = ORIG.split('').map((c,i)=>{
+      if(i<iter) return ORIG[i];
+      return CHARS[Math.floor(Math.random()*CHARS.length)];
+    }).join('');
+    if(++iter>ORIG.length){ clearInterval(iv); cityEl.textContent=ORIG; }
+  },55);
+}
+setTimeout(scramble, 900);
+setInterval(scramble, 7000);
+
+/* ——— FADE UP ——— */
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }});
+},{threshold:.12});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+
+/* ——— 3D TILT ——— */
+document.querySelectorAll('.svc-card').forEach(card=>{
+  card.addEventListener('mousemove', e=>{
+    const r=card.getBoundingClientRect();
+    const cx=(e.clientX-r.left)/r.width-.5;
+    const cy=(e.clientY-r.top)/r.height-.5;
+    card.style.setProperty('--rx', (-cy*10)+'deg');
+    card.style.setProperty('--ry', (cx*10)+'deg');
+    card.style.setProperty('--mx', ((e.clientX-r.left)/r.width*100)+'%');
+    card.style.setProperty('--my', ((e.clientY-r.top)/r.height*100)+'%');
+  });
+  card.addEventListener('mouseleave',()=>{
+    card.style.setProperty('--rx','0deg');
+    card.style.setProperty('--ry','0deg');
+    card.style.transform='';
+  });
+});
+
+/* ——— CAROUSEL ——— */
+const track = document.getElementById('carousel');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+let pos=0, dragging=false, startX=0, startPos=0;
+const cardW = 340+16;
+function maxPos(){ return -(track.children.length * cardW - track.parentElement.offsetWidth - 16); }
+function clamp(v){ return Math.min(0, Math.max(maxPos(), v)); }
+function setPos(v){ pos=clamp(v); track.style.transform=`translateX(${pos}px)`; }
+nextBtn.addEventListener('click',()=>setPos(pos-cardW));
+prevBtn.addEventListener('click',()=>setPos(pos+cardW));
+track.addEventListener('mousedown', e=>{ dragging=true; startX=e.clientX; startPos=pos; track.style.transition='none'; });
+window.addEventListener('mousemove', e=>{ if(!dragging)return; setPos(startPos+(e.clientX-startX)); });
+window.addEventListener('mouseup', ()=>{ if(!dragging)return; dragging=false; track.style.transition='transform .5s cubic-bezier(.4,0,.2,1)'; });
+track.addEventListener('touchstart', e=>{ dragging=true; startX=e.touches[0].clientX; startPos=pos; track.style.transition='none'; },{passive:true});
+track.addEventListener('touchmove', e=>{ if(!dragging)return; setPos(startPos+(e.touches[0].clientX-startX)); },{passive:true});
+track.addEventListener('touchend', ()=>{ dragging=false; track.style.transition='transform .5s cubic-bezier(.4,0,.2,1)'; });
+let autoIdx=0;
+const autoScroll = setInterval(()=>{
+  if(dragging)return;
+  autoIdx++; const next=-(autoIdx*cardW);
+  if(next < maxPos()){ autoIdx=0; setPos(0); } else setPos(next);
+},3800);
+</script>
+</body>
+</html>
